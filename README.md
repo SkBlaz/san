@@ -2,7 +2,7 @@
 This is the repository of the SAN paper, found here:
 
 ```
-@misc{krlj2020feature,
+@misc{skrlj2020feature,
     title={Feature Importance Estimation with Self-Attention Networks},
     author={Blaž Škrlj and Sašo Džeroski and Nada Lavrač and Matej Petkovič},
     year={2020},
