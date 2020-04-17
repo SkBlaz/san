@@ -1,10 +1,15 @@
-## a simple setup.py file.
+import os
+from setuptools import setup, find_packages
 
-from os import path
-import sys
-from setuptools import setup,find_packages
-from setuptools.extension import Extension
-    
+
+def parse_requirements(file):
+    required_packages = []
+    with open(os.path.join(os.path.dirname(__file__), file)) as req_file:
+        for line in req_file:
+            required_packages.append(line.strip())
+    return required_packages
+
+
 setup(name='san',
       version='0.1',
       description="Feature ranking with self-attention networks",
@@ -14,6 +19,5 @@ setup(name='san',
       license='MIT',
       packages=find_packages(),
       zip_safe=False,
-      include_package_data=True)
-
-
+      include_package_data=True,
+      install_requires=parse_requirements('requirements.txt'))

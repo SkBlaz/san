@@ -4,7 +4,7 @@ This is the repository of the SAN paper, found here:
 ```
 @misc{skrlj2020feature,
     title={Feature Importance Estimation with Self-Attention Networks},
-    author={Blaž Škrlj and Sašo Džeroski and Nada Lavrač and Matej Petkovič},
+    author={Bla\v{z} \v{S}krlj and Sa\v{s}o D\v{z}eroski and Nada Lavra\v{c} and Matej Petkovi\'{c}},
     year={2020},
     eprint={2002.04464},
     archivePrefix={arXiv},
@@ -44,7 +44,7 @@ X = dataobj['data']
 Y = dataobj['target']
 names = dataobj['feature_names']
 
-## let's overfit, just for demo purposes
+# let's overfit, just for demo purposes
 clf = san.SAN(num_epochs = 32, num_head = 2, batch_size = 8, dropout = 0.2, hidden_layer_size = 32)
 X = sparse.csr_matrix(X)
 clf.fit(X, Y)
