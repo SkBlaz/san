@@ -11,7 +11,7 @@ This is the repository of the SAN paper, found here:
     primaryClass={cs.LG}
 }
 ```
-Note that the full code with datasets to reproduce the paper can be found here: https://gitlab.com/skblaz/attentionrank (code is messy though, proceed with caution).
+Note that the full code with datasets to reproduce the paper can be found here: https://gitlab.com/skblaz/attentionrank (code is messy though, proceed with caution). The purpose of this repository is to provide all functionality in a user-friendly way. Disclaimer: this code was not extensively benchmarked and can contain bugs. If you find one, please open an issue.
 
 # Installing SANs
 ```
