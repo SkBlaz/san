@@ -115,11 +115,12 @@ class SANNetwork(nn.Module):
 
 
 class SAN:
-    def __init__(self, batch_size=32, num_epochs=32, learning_rate=0.001, stopping_crit=10, hidden_layer_size=64,
+    def __init__(self, batch_size=32, num_epochs=32, learning_rate=0.001, stopping_crit=10, hidden_layer_size=64,num_heads=1,
                  dropout=0.2):  # , num_head=1
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.loss = torch.nn.CrossEntropyLoss()
         self.dropout = dropout
+        self.num_heads = num_heads
         self.batch_size = batch_size
         self.stopping_crit = stopping_crit
         self.num_epochs = num_epochs
@@ -142,7 +143,7 @@ class SAN:
         dataloader = DataLoader(train_dataset, batch_size=self.batch_size, shuffle=True, num_workers=1)
         stopping_iteration = 0
         current_loss = 10000
-        self.model = SANNetwork(features.shape[1], num_classes=nun, hidden_layer_size=self.hidden_layer_size,
+        self.model = SANNetwork(features.shape[1], num_classes=nun, hidden_layer_size=self.hidden_layer_size, num_heads = self.num_heads,
                                 dropout=self.dropout, device=self.device).to(self.device)
         self.optimizer = torch.optim.Adam(self.model.parameters(), lr=self.learning_rate)
         self.num_params = sum(p.numel() for p in self.model.parameters())

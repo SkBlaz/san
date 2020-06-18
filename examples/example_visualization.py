@@ -16,7 +16,7 @@ def test_simple_ranking():
     names = data_obj['feature_names']
 
     # let's overfit, just for demo purposes
-    clf = san.SAN(num_epochs=32, num_head=2, batch_size=8, dropout=0.2, hidden_layer_size=32)
+    clf = san.SAN(num_epochs=32, num_heads=2, batch_size=8, dropout=0.2, hidden_layer_size=32)
     x = sparse.csr_matrix(x)
     clf.fit(x, y)
     predictions = clf.predict(x)
