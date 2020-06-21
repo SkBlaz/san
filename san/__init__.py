@@ -168,6 +168,7 @@ class SAN:
             mean_loss = np.mean(losses_per_batch)
             if mean_loss < current_loss:
                 current_loss = mean_loss
+                stopping_iteration = 0
             else:
                 stopping_iteration += 1
             logging.info("epoch {}, mean loss per batch {}".format(epoch, mean_loss))
