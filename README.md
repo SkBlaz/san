@@ -73,5 +73,5 @@ plt.show()
 ![Example](images/example.png)
 
 
-Example mock evaluation is shown below:
+Example mock evaluation is shown below (examples/example_benchmark.py):
 ![Example](images/example1.png)
