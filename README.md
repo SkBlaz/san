@@ -71,3 +71,7 @@ plt.show()
 ```
 
 ![Example](images/example.png)
+
+
+Example mock evaluation is shown below:
+![Example](images/example1.png)
