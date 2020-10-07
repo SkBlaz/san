@@ -1,16 +1,8 @@
 # Feature ranking with self-attention networks
 This is the repository of the SAN paper, found here:
 
-```
-@misc{skrlj2020feature,
-    title={Feature Importance Estimation with Self-Attention Networks},
-    author={Bla\v{z} \v{S}krlj and Sa\v{s}o D\v{z}eroski and Nada Lavra\v{c} and Matej Petkovi\'{c}},
-    year={2020},
-    eprint={2002.04464},
-    archivePrefix={arXiv},
-    primaryClass={cs.LG}
-}
-```
+http://ecai2020.eu/papers/1721_paper.pdf
+(please, cite if you are using it!)
 Note that the full code with datasets to reproduce the paper can be found here: https://gitlab.com/skblaz/attentionrank (the code is in benchmark-ready form). The purpose of this repository is to provide all functionality in a user-friendly way. Disclaimer: this code was not extensively benchmarked and can contain bugs. If you find one, please open an issue.
 
 # Installing SANs
