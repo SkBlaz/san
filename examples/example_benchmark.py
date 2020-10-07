@@ -19,12 +19,12 @@ def test_simple_benchmark():
     names = data_obj['feature_names']
 
     # let's overfit, just for demo purposes
-    clf = san.SAN(num_epochs=32, num_heads=2, batch_size=8, dropout=0.2, hidden_layer_size=32)
+    clf = san.SAN(num_epochs=64, num_heads=2, batch_size=8, dropout=0.2, hidden_layer_size=32, learning_rate = 0.01)
     x = sparse.csr_matrix(x)
     clf.fit(x, y)
     predictions = clf.predict(x)
     global_attention_weights = clf.get_mean_attention_weights()
-    local_attention_matrix = clf.get_instance_attention(x.todense())
+    local_attention_matrix = clf.get_instance_attention(x)
     mutual_information = mutual_info_classif(x, y)
     rf_model = RandomForestClassifier()
     rf_model.fit(x, y)

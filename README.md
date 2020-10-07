@@ -50,9 +50,9 @@ X = sparse.csr_matrix(X)
 clf.fit(X, Y)
 preds = clf.predict(X)
 global_attention_weights = clf.get_mean_attention_weights()
-local_attention_matrix = clf.get_instance_attention(X.todense())
+local_attention_matrix = clf.get_instance_attention(X)
 mutual_information = mutual_info_classif(X,Y)
-rf = RandomForestClassifier().fit(X,Y).feature_importances_    
+rf = RandomForestClassifier().fit(X,Y).feature_importances_
 
 plt.plot(names, global_attention_weights, label = "Global attention", marker = "x")
 plt.plot(names, np.mean(local_attention_matrix, axis = 0), label = "Local attention - mean", marker = "x")
