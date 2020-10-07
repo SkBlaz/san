@@ -2,7 +2,7 @@
 This is the repository of the SAN paper, found here:
 
 http://ecai2020.eu/papers/1721_paper.pdf
-(please, cite if you are using it!)
+(please, cite if you are using it!).
 Note that the full code with datasets to reproduce the paper can be found here: https://gitlab.com/skblaz/attentionrank (the code is in benchmark-ready form). The purpose of this repository is to provide all functionality in a user-friendly way. Disclaimer: this code was not extensively benchmarked and can contain bugs. If you find one, please open an issue.
 
 # Installing SANs
