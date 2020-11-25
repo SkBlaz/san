@@ -12,6 +12,7 @@ from sklearn.preprocessing import OneHotEncoder
 from torch.utils.data import DataLoader, Dataset
 import logging
 import numpy as np
+from scipy import sparse
 
 torch.manual_seed(123321)
 np.random.seed(123321)
@@ -22,6 +23,7 @@ logging.getLogger().setLevel(logging.INFO)
 
 class E2EDatasetLoader(Dataset):
     def __init__(self, features, targets=None):  # , transform=None
+        features = sparse.csr_matrix(features)
         self.features = features.tocsr()
 
         if targets is not None:
