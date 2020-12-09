@@ -1,6 +1,37 @@
 # Feature ranking with self-attention networks
 This is the repository of the SAN paper, found here:
 
+```
+@inproceedings{DBLP:conf/ecai/SkrljDLP20,
+  author    = {Blaz Skrlj and
+               Saso Dzeroski and
+               Nada Lavrac and
+               Matej Petkovic},
+  editor    = {Giuseppe De Giacomo and
+               Alejandro Catal{\'{a}} and
+               Bistra Dilkina and
+               Michela Milano and
+               Sen{\'{e}}n Barro and
+               Alberto Bugar{\'{\i}}n and
+               J{\'{e}}r{\^{o}}me Lang},
+  title     = {Feature Importance Estimation with Self-Attention Networks},
+  booktitle = {{ECAI} 2020 - 24th European Conference on Artificial Intelligence,
+               29 August-8 September 2020, Santiago de Compostela, Spain, August
+               29 - September 8, 2020 - Including 10th Conference on Prestigious
+               Applications of Artificial Intelligence {(PAIS} 2020)},
+  series    = {Frontiers in Artificial Intelligence and Applications},
+  volume    = {325},
+  pages     = {1491--1498},
+  publisher = {{IOS} Press},
+  year      = {2020},
+  url       = {https://doi.org/10.3233/FAIA200256},
+  doi       = {10.3233/FAIA200256},
+  timestamp = {Tue, 15 Sep 2020 15:08:42 +0200},
+  biburl    = {https://dblp.org/rec/conf/ecai/SkrljDLP20.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+```
+
 http://ecai2020.eu/papers/1721_paper.pdf
 (please, cite if you are using it!).
 Note that the full code with datasets to reproduce the paper can be found here: https://gitlab.com/skblaz/attentionrank (the code is in benchmark-ready form). The purpose of this repository is to provide all functionality in a user-friendly way. Disclaimer: this code was not extensively benchmarked and can contain bugs. If you find one, please open an issue.
