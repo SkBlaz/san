@@ -44,7 +44,7 @@ python setup.py install
 or
 
 ```
-pip install git+https://github.com/https://github.com/SkBlaz/san
+pip install git+https:github.com/SkBlaz/san
 ```
 
 # Using SANs
