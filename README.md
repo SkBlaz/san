@@ -41,6 +41,11 @@ Note that the full code with datasets to reproduce the paper can be found here: 
 python setup.py install
 ```
 
+or
+
+```
+pip install git+https://github.com/SkBlaz/san
+```
 # Using SANs
 A simple usecase is given next:
 
