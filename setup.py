@@ -11,7 +11,7 @@ def parse_requirements(file):
 
 
 setup(name='san',
-      version='0.3',
+      version='0.31',
       description="Feature ranking with self-attention networks",
       url='http://github.com/skblaz/san',
       author='Blaž Škrlj and Matej Petković',
