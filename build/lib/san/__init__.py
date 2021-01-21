@@ -74,6 +74,8 @@ class SANNetwork(nn.Module):
             placeholder = torch.add(placeholder,attended_matrix)
         placeholder /= len(self.multi_head)
         out = placeholder
+        if return_softmax:
+            out = self.softmax(out)
         return out
 
     def get_mean_attention_weights(self):
