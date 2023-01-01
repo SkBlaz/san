@@ -55,6 +55,7 @@ class SANNetwork(nn.Module):
         self.device = device
         self.softmax = nn.Softmax(dim=1)
         self.softmax2 = nn.Softmax(dim=0)
+        self.softmax3 = nn.Softmax(dim=-1) # the last dim indicates the feature dim
         self.activation = nn.SELU()
         self.num_heads = num_heads
         self.sigmoid = nn.Sigmoid()
@@ -70,7 +71,7 @@ class SANNetwork(nn.Module):
             if return_softmax:
                 attended_matrix = self.multi_head[k](input_space)
             else:
-                attended_matrix = self.multi_head[k](input_space) * input_space
+                attended_matrix = self.softmax3(self.multi_head[k](input_space)) * input_space
             placeholder = torch.add(placeholder,attended_matrix)
         placeholder /= len(self.multi_head)
         out = placeholder
