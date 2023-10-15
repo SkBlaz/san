@@ -65,19 +65,22 @@ class SANNetwork(nn.Module):
         self.multi_head = nn.ModuleList([nn.Linear(input_size, input_size) for k in range(num_heads)])
         
     def forward_attention(self, input_space, return_softmax=False):
-
+        placeholder2 = torch.zeros(input_space.shape).to(self.device)
         placeholder = torch.zeros(input_space.shape).to(self.device)
         for k in range(len(self.multi_head)):
             if return_softmax:
                 attended_matrix = self.multi_head[k](input_space)
             else:
-                attended_matrix = self.softmax3(self.multi_head[k](input_space)) * input_space
+                attention_matrix = self.softmax3(self.multi_head[k](input_space))
+                attended_matrix = attention_matrix * input_space
             placeholder = torch.add(placeholder,attended_matrix)
+            placeholder2 = torch.add(placeholder2, attention_matrix)
         placeholder /= len(self.multi_head)
+        placeholder2 /= len(self.multi_head)
         out = placeholder
         if return_softmax:
             out = self.softmax(out)
-        return out
+        return out, placeholder2
 
     def get_mean_attention_weights(self):
         activated_weight_matrices = []
